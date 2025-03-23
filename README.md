@@ -19,11 +19,17 @@ A Spring Boot-based REST API for managing books, patrons, and borrowing records 
 ## Setup and Installation
 
 ### Prerequisites
-- Java 17
-- MySQL
-- Gradle
+Before running the application, make sure you have the following installed:
 
-### Steps
+- **Java 17**: This is the version used for building and running the application. You can download it from [Oracle](https://www.oracle.com/java/technologies/javase-jdk17-downloads.html) or use a package manager like Homebrew (for macOS) or SDKMAN!.
+- **Gradle**: Gradle is used as the build tool for managing dependencies and building the project. You can install Gradle by following the guide [here](https://gradle.org/install/).
+- **MySQL (with phpMyAdmin)**: The application uses MySQL for database storage. I set up MySQL via [phpMyAdmin](https://www.phpmyadmin.net/), a web-based interface for managing MySQL databases.
+
+### Steps to Set Up Locally
+
 1. **Clone the repository**:
+   Open a terminal and run the following command to clone the repository:
+
    ```bash
    git clone https://github.com/MohamadSalimFarhat/library-api.git
+
