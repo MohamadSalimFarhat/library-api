@@ -40,7 +40,7 @@ Before you get started, make sure you have the following installed on your machi
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/library_db
    spring.datasource.username=root
-   spring.datasource.password=root
+   spring.datasource.password=
    spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
    spring.jpa.hibernate.ddl-auto=update
    ```
