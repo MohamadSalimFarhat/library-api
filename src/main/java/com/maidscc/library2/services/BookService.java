@@ -34,13 +34,17 @@ public class BookService {
     }
 
     public Book saveBook(Book book) {
-        Optional<Book> existingBook = bookRepository.findByIsbn(book.getIsbn());
-        if (existingBook.isPresent()) {
-            throw new ResourceNotFoundException("A book with ISBN " + book.getIsbn() + " already exists.");
+        // Only check for existing ISBN if the book doesn't already have an ID
+        if (book.getId() == null) {
+            Optional<Book> existingBook = bookRepository.findByIsbn(book.getIsbn());
+            if (existingBook.isPresent()) {
+                throw new ResourceNotFoundException("A book with ISBN " + book.getIsbn() + " already exists.");
+            }
         }
         
         return bookRepository.save(book);
     }
+
 
     public void deleteBook(Long id) {
         Book book = bookRepository.findById(id)

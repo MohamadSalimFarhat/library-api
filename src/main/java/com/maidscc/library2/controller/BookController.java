@@ -57,12 +57,13 @@ public class BookController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
         }
 
-        // Update the book
         book.setId(id);
         book.updateAvailability();
+
         Book updatedBook = bookService.saveBook(book);
         return ResponseEntity.ok(updatedBook);
     }
+
 
     // Delete a book
     @DeleteMapping("/{id}")
