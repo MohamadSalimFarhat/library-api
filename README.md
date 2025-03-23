@@ -72,8 +72,3 @@ The project includes unit tests for various components, located in the `src/test
 ```bash
 ./gradlew test
 ```
-
----
-
-That’s it! You’re all set to explore and use the Library Management System. If you have any questions or run into issues, feel free to reach out. Happy coding! 🚀
-```
