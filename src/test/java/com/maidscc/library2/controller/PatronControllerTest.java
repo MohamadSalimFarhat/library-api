@@ -30,7 +30,7 @@ class PatronControllerTest {
 
         mockMvc.perform(get("/api/patrons"))
             .andExpect(status().isOk())
-            .andExpect(content().json("[]")); // ✅ Now correctly expects an empty array
+            .andExpect(content().json("[]"));
 
         verify(patronService, times(1)).getAllPatrons();
     }
@@ -72,7 +72,7 @@ class PatronControllerTest {
     @Test
     void deletePatron() throws Exception {
         // Arrange
-        when(patronService.deletePatron(1L)).thenReturn(true); // ✅ Correct mocking
+        when(patronService.deletePatron(1L)).thenReturn(true);
 
         // Act & Assert
         mockMvc.perform(delete("/api/patrons/1"))

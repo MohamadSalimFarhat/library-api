@@ -14,8 +14,8 @@ import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@WebMvcTest(BorrowingController.class) // Update to BorrowingController
-class BorrowingControllerTest { // Update to BorrowingControllerTest
+@WebMvcTest(BorrowingController.class)
+class BorrowingControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
